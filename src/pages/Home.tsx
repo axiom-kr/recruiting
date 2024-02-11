@@ -1,6 +1,9 @@
+import { useRef } from "react";
 import { css } from "../../styled-system/css";
 
 const Home = () => {
+  const homeRef = useRef<HTMLDivElement>(null);
+
   return (
     <div
       className={css({
@@ -10,6 +13,7 @@ const Home = () => {
         justifyContent: "center",
         alignItems: "center",
       })}
+      ref={homeRef}
     >
       <span
         className={css({
