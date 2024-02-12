@@ -12,3 +12,7 @@ body {
   background-color: #ffae63;
   color: black;
 }
+
+.active {
+  color: white;
+}

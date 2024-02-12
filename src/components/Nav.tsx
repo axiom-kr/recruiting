@@ -2,10 +2,10 @@ import { css } from "../../styled-system/css";
 import { ForwardedRef, forwardRef } from "react";
 
 interface NavProps {
-  firstRef: ForwardedRef<HTMLDivElement>;
-  secondRef: ForwardedRef<HTMLDivElement>;
-  thirdRef: ForwardedRef<HTMLDivElement>;
-  fourthRef: ForwardedRef<HTMLDivElement>;
+  firstRef: ForwardedRef<HTMLSpanElement>;
+  secondRef: ForwardedRef<HTMLSpanElement>;
+  thirdRef: ForwardedRef<HTMLSpanElement>;
+  fourthRef: ForwardedRef<HTMLSpanElement>;
 }
 
 const Nav = forwardRef<HTMLDivElement, NavProps>(
@@ -25,15 +25,18 @@ const Nav = forwardRef<HTMLDivElement, NavProps>(
         })}
       >
         <span
-          className={css({
-            fontSize: "md",
-            color: "#656565",
-            fontWeight: "black",
-          })}
+          className={
+            css({
+              fontSize: "md",
+              color: "#656565",
+              fontWeight: "black",
+            }) + " active"
+          }
           ref={firstRef}
         >
-          HOME
+          <a href="#home">HOME</a>
         </span>
+
         <span
           className={css({
             fontSize: "md",
@@ -42,7 +45,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>(
           })}
           ref={secondRef}
         >
-          ABOUT
+          <a href="#about">ABOUT</a>
         </span>
         <span
           className={css({
@@ -52,7 +55,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>(
           })}
           ref={thirdRef}
         >
-          PROGRAM
+          <a href="#program">PROGRAM</a>
         </span>
         <span
           className={css({
@@ -62,7 +65,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>(
           })}
           ref={fourthRef}
         >
-          JOIN US
+          <a href="#recruit">JOIN US</a>
         </span>
       </div>
     );

@@ -14,7 +14,7 @@ const Recruit = forwardRef<HTMLDivElement>(
           color: "white",
         })}
         ref={ref}
-        id="program"
+        id="recruit"
       >
         joinus
       </div>
