@@ -11,6 +11,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { gsap } from "gsap";
 import Program from "./pages/Program";
 import Recruit from "./pages/Recruit";
+import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -36,7 +37,54 @@ function App() {
   };
 
   useEffect(() => {
+    const chars = new SplitType("#why-axiom", { types: "chars" }).chars;
     const ctx = gsap.context(() => {
+      gsap.from("#about-line-vertical", {
+        scrollTrigger: {
+          trigger: "#about",
+          scrub: true,
+          start: "top 60%",
+          end: "top top",
+        },
+        scaleY: 0,
+        transformOrigin: "top",
+        ease: "none",
+      });
+
+      gsap.fromTo(
+        chars,
+        {
+          y: 100,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          stagger: 0.05,
+          duration: 1,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: "#about",
+            scrub: true,
+            start: "top 40%",
+            end: "top top",
+          },
+        }
+      );
+      gsap.to("#sections", {
+        xPercent: -40,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#program",
+          start: "top 56px",
+          end: "+=1000",
+          pin: true,
+          scrub: 1,
+          invalidateOnRefresh: true,
+          anticipatePin: 1,
+        },
+      });
+
       navRefs.forEach((nav) => {
         const element = nav.current?.children[0]?.getAttribute("href");
         console.log(element);

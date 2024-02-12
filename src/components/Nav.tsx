@@ -22,6 +22,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>(
           gap: "56px",
           top: "50vh",
           transform: "translateY(-50%)",
+          zIndex: "30",
         })}
       >
         <span

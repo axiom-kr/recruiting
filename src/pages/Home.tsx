@@ -1,4 +1,4 @@
-import { ForwardedRef, RefObject, forwardRef } from "react";
+import { ForwardedRef, forwardRef } from "react";
 import { css } from "../../styled-system/css";
 
 const Home = forwardRef<HTMLDivElement>(

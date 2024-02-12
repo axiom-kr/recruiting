@@ -29,9 +29,17 @@ const About = forwardRef<HTMLDivElement>(
         >
           <div
             className={css({
-              borderLeft: "6px solid #FFAE63",
+              height: "216px",
+              width: "6px",
+              backgroundColor: "#FFAE63",
+            })}
+            id="about-line-vertical"
+          />
+          <div
+            className={css({
               pl: "40px",
             })}
+            id="why-axiom"
           >
             WHY
             <br />
