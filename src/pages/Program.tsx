@@ -63,6 +63,7 @@ const Program = forwardRef<HTMLDivElement>(
                 width: "500px",
                 height: "500px",
                 border: "2px solid white",
+                p: "0 30px 30px 30px",
               })}
             >
               <span

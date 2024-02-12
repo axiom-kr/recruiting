@@ -76,12 +76,11 @@ function App() {
         ease: "none",
         scrollTrigger: {
           trigger: "#program",
-          start: "top 56px",
+          start: "top top",
           end: "+=1000",
           pin: true,
           scrub: 1,
           invalidateOnRefresh: true,
-          anticipatePin: 1,
         },
       });
 
