@@ -23,6 +23,7 @@ const Nav = forwardRef<HTMLDivElement, NavProps>(
           top: "50vh",
           transform: "translateY(-50%)",
           zIndex: "30",
+          visibility: ["hidden", undefined, undefined, "visible"],
         })}
       >
         <span

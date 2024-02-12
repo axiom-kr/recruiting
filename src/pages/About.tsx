@@ -7,9 +7,10 @@ const About = forwardRef<HTMLDivElement>(
       <div
         className={css({
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
+          lg: { flexDirection: "row" },
           justifyContent: "center",
-          gap: "200px",
+          gap: ["50px", "100px", "150px", "200px"],
         })}
         id="about"
         ref={ref}
@@ -21,17 +22,19 @@ const About = forwardRef<HTMLDivElement>(
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
-            height: `100vh`,
-            fontSize: "72px",
+            height: "300px",
+            lg: { height: `100vh`, fontSize: "72px" },
+            fontSize: "36px",
             color: "white",
             fontWeight: "extrabold",
           })}
         >
           <div
             className={css({
-              height: "216px",
+              height: "108px",
+              lg: { height: "216px" },
               width: "6px",
-              backgroundColor: "#FFAE63",
+              backgroundColor: "#FF993A",
             })}
             id="about-line-vertical"
           />
@@ -49,6 +52,7 @@ const About = forwardRef<HTMLDivElement>(
         <div
           className={css({
             display: "flex",
+            gap: "50vh",
             flexDirection: "column",
           })}
         >
@@ -57,7 +61,7 @@ const About = forwardRef<HTMLDivElement>(
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              height: `100vh`,
+              lg: { height: `100vh` },
               fontSize: "16px",
               color: "white",
               fontWeight: "light",
@@ -69,7 +73,7 @@ const About = forwardRef<HTMLDivElement>(
               Axiom은 실제 창업을 목표로 도전과 성장을 경험하고 싶은 분들을{" "}
               <br />
               위해, 창업 초기의 준비과정을 지원하는{" "}
-              <em className={css({ color: "#FFAE63" })}>
+              <em className={css({ color: "#FF993A" })}>
                 특별한 단체
               </em>입니다. <br />
               <br />
@@ -83,7 +87,7 @@ const About = forwardRef<HTMLDivElement>(
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              height: `100vh`,
+              lg: { height: `100vh` },
               fontSize: "16px",
               color: "white",
               fontWeight: "light",
@@ -94,7 +98,7 @@ const About = forwardRef<HTMLDivElement>(
             <p>
               <em
                 className={css({
-                  color: "#FFAE63",
+                  color: "#FF993A",
                   fontSize: "24px",
                   fontWeight: "extrabold",
                 })}
@@ -107,7 +111,7 @@ const About = forwardRef<HTMLDivElement>(
               바탕으로 글로벌 시장 동향에 대한{" "}
               <em
                 className={css({
-                  color: "#FFAE63",
+                  color: "#FF993A",
                 })}
               >
                 다양한 해석과 시각
@@ -127,7 +131,7 @@ const About = forwardRef<HTMLDivElement>(
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              height: `100vh`,
+              lg: { height: `100vh` },
               fontSize: "16px",
               color: "white",
               fontWeight: "light",
@@ -138,7 +142,7 @@ const About = forwardRef<HTMLDivElement>(
             <p>
               <em
                 className={css({
-                  color: "#FFAE63",
+                  color: "#FF993A",
                   fontSize: "24px",
                   fontWeight: "extrabold",
                 })}
@@ -155,7 +159,7 @@ const About = forwardRef<HTMLDivElement>(
               대학생들이 주로 약점을 보이는{" "}
               <em
                 className={css({
-                  color: "#FFAE63",
+                  color: "#FF993A",
                 })}
               >
                 사업의 수익성과 BM
@@ -172,7 +176,7 @@ const About = forwardRef<HTMLDivElement>(
               display: "flex",
               justifyContent: "center",
               alignItems: "center",
-              height: `100vh`,
+              lg: { height: `100vh` },
               fontSize: "16px",
               color: "white",
               fontWeight: "light",
@@ -183,7 +187,7 @@ const About = forwardRef<HTMLDivElement>(
             <p>
               <em
                 className={css({
-                  color: "#FFAE63",
+                  color: "#FF993A",
                   fontSize: "24px",
                   fontWeight: "extrabold",
                 })}
@@ -198,7 +202,7 @@ const About = forwardRef<HTMLDivElement>(
               국내를 넘어{" "}
               <em
                 className={css({
-                  color: "#FFAE63",
+                  color: "#FF993A",
                 })}
               >
                 더 큰 시장의 가능성

@@ -76,7 +76,7 @@ const FullPageCanvas = () => {
 
       stars.forEach((star) => {
         ctx.beginPath();
-        ctx.fillStyle = "#FFAE63";
+        ctx.fillStyle = "#FF993A";
         ctx.arc(star.x, star.y, star.size, 0, Math.PI * 2);
         ctx.fill();
       });

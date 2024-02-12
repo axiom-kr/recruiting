@@ -69,7 +69,7 @@ const Program = forwardRef<HTMLDivElement>(
               <span
                 className={css({
                   fontSize: "96px",
-                  color: "#FFAE63",
+                  color: "#FF993A",
                   fontWeight: "extrabold",
                 })}
               >{`0${index + 1}`}</span>
